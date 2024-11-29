@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: luffy-nginx 
-  namespace: prod
+  namespace: foo 
   labels:
     app: nginx
 spec:
@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
       - name: luffy-nginx 
-        image: luffyxxsenpai/nginx:v0.4.0
+        image: luffyxxsenpai/nginx:v0.3.0
