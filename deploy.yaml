@@ -1,0 +1,21 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myjob
+  namespace: default
+  labels:
+    app: myjob
+spec:
+  selector:
+    matchLabels:
+      app: myjob
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myjob
+    spec:
+      containers:
+      - name: luffy-nginx 
+          image: luffyxxsenpai/nginx:v0.1.0
