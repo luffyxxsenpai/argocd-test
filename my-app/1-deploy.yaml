@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myjob
-  namespace: default
+  name: luffy-nginx 
+  namespace: prod
   labels:
-    app: myjob
+    app: nginx
 spec:
   selector:
     matchLabels:
-      app: myjob
-  replicas: 1
+      app: nginx
+  replicas: 2 
   template:
     metadata:
       labels:
-        app: myjob
+        app: nginx
     spec:
       containers:
       - name: luffy-nginx 
-        image: luffyxxsenpai/nginx:v0.1.0
+        image: luffyxxsenpai/nginx:v0.2.0
