@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
       - name: luffy-nginx 
-        image: luffyxxsenpai/nginx:v0.2.0
+        image: luffyxxsenpai/nginx:v0.3.0
